@@ -49,8 +49,7 @@ public class Polynom {
         for(int i=0;i<polynom1.getSize();i++)
         {
             temp=polynom1.getMonom(i);
-            //System.out.println("coef"+temp.getCoeficient());
-            // System.out.println("degree"+temp.getDegree());
+          
             aux.addToList(temp.Derivate(polynom1.getMonom(i)));
         }
         return aux;
@@ -63,8 +62,7 @@ public class Polynom {
         for(int i=0;i<polynom1.getSize();i++)
         {
             temp=polynom1.getMonom(i);
-            //System.out.println("coef"+temp.getCoeficient());
-            // System.out.println("degree"+temp.getDegree());
+         
             aux.addToList(temp.Integrate(polynom1.getMonom(i)));
         }
         return aux;
@@ -192,7 +190,7 @@ public class Polynom {
         {
             aux=aux+s;
         }
-        //System.out.println(aux);
+   
         return aux;
 
     }
