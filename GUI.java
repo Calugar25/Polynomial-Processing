@@ -34,7 +34,7 @@ public class GUI extends JFrame {
          frame =new JFrame("Polynomial processing");
           final JTextPane resultPol=new JTextPane();
 
-       // frame.getContentPane().setLayout(new GridLayout(0,2,5,5));
+       
         JPanel panel =new JPanel();
         panel.setLayout(new GridLayout(0,2,20,20));
 
@@ -45,17 +45,17 @@ public class GUI extends JFrame {
         panePol1.setText("POLYNOMIAL 1 ");
         panel.add(panePol1);
 
-        //The text field for the first polynomial
+  
 
         pol1Text.setPreferredSize(new Dimension(300,30) );
         panel.add(pol1Text);
 
-        //The Pane for the second polynomial
+      
         JTextPane panePol2= new JTextPane();
         panePol2.setText("POLYMONIAL 2 ");
         panel.add(panePol2);
 
-        //the text field for the second polynomial
+   
 
         pol2Text.setPreferredSize(new Dimension(300,30));
         panel.add(pol2Text);
@@ -80,12 +80,10 @@ public class GUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 pol1=Processes.readPol(pol1Text);
                 pol2=Processes.readPol(pol2Text);
-               // System.out.println("prima din gui "+pol2.getMonom(0).getCoeficient());
-
                 pol2= Polynom.mulConst(pol2,-1);
-               // System.out.println("AICI E IN GUI"+pol2.getMonom(0).getCoeficient());
+             
                 subPol=Processes.addPolynomials(pol1,pol2);
-               // System.out.println("e aici ");
+               
                 printRezInt(subPol,resultPol);
 
 
@@ -112,15 +110,15 @@ public class GUI extends JFrame {
         //button for Division
 
         JButton divButton=new JButton("DIVISION");
-       /* divButton.addActionListener(new ActionListener() {
+        divButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 pol1=Processes.readPol(pol1Text);
                 pol2=Processes.readPol(pol2Text);
                 divPol=Processes.divPol(pol1,pol2);
-                // System.out.println("asta e coef si degreee"+divPol.getMonom(0).getCoeficient()+divPol.getMonom(0).getDegree());
+  
                 printRezFloat(divPol,resultPol);
             }
-        });*/
+        });
 
         panel.add(divButton);
 
@@ -168,7 +166,7 @@ public class GUI extends JFrame {
         frame.setLocationRelativeTo(null);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       // frame.getContentPane().setLayout(null);
+
 
         frame.setResizable(false);
         frame.setVisible(true);
