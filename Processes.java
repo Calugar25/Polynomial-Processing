@@ -139,8 +139,7 @@ public class Processes  {
             {
                 if(polynom1.getMonom(cntPol1).getDegree()==polynom2.getMonom(cntPol2).getDegree())
                 {
-                    //System.out.println("asta e la primu"+polynom1.getMonom(cntPol1).getCoeficient());
-                   // System.out.println("asta e la al 2 lea"+polynom2.getMonom(cntPol2).getCoeficient());
+                    
 
                     double coef=(polynom1.getMonom(cntPol1).getCoeficient())+(polynom2.getMonom(cntPol2).getCoeficient());
                     int degree=polynom1.getMonom(cntPol1).getDegree();
